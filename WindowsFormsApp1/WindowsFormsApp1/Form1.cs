@@ -62,20 +62,32 @@ namespace WindowsFormsApp1
             int flag = 0;
             string un = textBoxun.Text;
             string ps = textBoxps.Text;
-
-            path = "student.txt";
-            if (FindUser(un, ps, path)) { st.Show(); flag = 1; }
-            path = "instructor.txt";
-            if (FindUser(un, ps, path)) { ins.Show(); flag = 1; }
-            path = "manager.txt";
-            if (FindUser(un, ps, path)) { ma.Show(); flag = 1; }
-            if (flag == 0)
-                ERE.Text = "Wrong password or ID";
-
+            if (un != "" && ps != "")
+            {
+                path = "student.txt";
+                if (FindUser(un, ps, path)) { st.Show(); flag = 1; this.Hide(); }
+                path = "instructor.txt";
+                if (FindUser(un, ps, path)) { ins.Show(); flag = 1; }
+                path = "manager.txt";
+                if (FindUser(un, ps, path)) { ma.Show(); flag = 1; this.Hide(); }
+                if (flag == 0)
+                    ERE.Text = "Wrong password or ID";
+            }
+            else ERE.Text = "Fill in the password and ID";
 
         }
 
         private void textBoxun_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
         {
 
         }

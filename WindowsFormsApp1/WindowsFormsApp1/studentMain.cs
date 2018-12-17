@@ -21,11 +21,14 @@ namespace WindowsFormsApp1
         {
             Schedule sc = new Schedule();
             sc.Show();
+            this.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
+            Form1 f1 = new Form1();
+            f1.Show();
         }
     }
 }

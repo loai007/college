@@ -198,7 +198,10 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
             this.Hide();
+            InstructorMain f3 = new InstructorMain();
+            f3.Show();
         }
     }
 }

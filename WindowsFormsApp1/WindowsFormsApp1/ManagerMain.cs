@@ -19,6 +19,7 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
+            this.Hide();
             ManagerAddC mac = new ManagerAddC();
             mac.Show();
         }
@@ -26,6 +27,8 @@ namespace WindowsFormsApp1
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
+            Form1 f1 = new Form1();
+            f1.Show();
         }
     }
 }
